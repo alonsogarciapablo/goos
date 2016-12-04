@@ -10,7 +10,7 @@ import auctionsniper.Main;
 
 public class MainWindow extends JFrame {
 	public static final String MAIN_WINDOW_NAME = "Auction Sniper Main";
-	private final JLabel sniperStatus = createLabel(Main.STATUS_JOINING);
+	private static final JLabel sniperStatus = createLabel(Main.STATUS_JOINING);
 
 	public MainWindow() {
 		super("Auction Sniper");
@@ -20,7 +20,11 @@ public class MainWindow extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 	}
-	
+
+	public static void showStatus(String status) {
+		sniperStatus.setText(status);
+	}
+
 	private static JLabel createLabel(String initialText) {
 		JLabel label = new JLabel(initialText);
 		label.setName(Main.SNIPER_STATUS_NAME);

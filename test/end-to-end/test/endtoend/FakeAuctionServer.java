@@ -46,7 +46,7 @@ public class FakeAuctionServer {
 		connection.disconnect();
 	}
 
-	public Object getItemId() {
+	public String getItemId() {
 		return itemId;
 	}
 }
